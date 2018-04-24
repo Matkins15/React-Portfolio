@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import styled from 'styled-components'
-import Container from '../theme/layout/Container'
+import { Container } from '../../theme/layout'
 
 export default class About extends Component {
   static PropTypes = {}

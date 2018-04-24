@@ -1,24 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import styled from 'styled-components'
-import Container from '../theme/layout/Container'
-import { Link } from 'react-router';
-
-
-const Image = styled.img`
-  width: 100vw;
-  height: 80vh; 
- `
-
- const Nav = styled.div`
-   width: 100vw;
-   height: 10vh;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
- `
+import { Container } from '../../theme/layout'
+import { Link } from 'react-router'
+import { Image, Nav, LandingImage } from './Home.style'
  
-
 export default class Home extends Component {
   static PropTypes = {}
 
@@ -31,7 +15,11 @@ export default class Home extends Component {
           <Link>Portfolio</Link>
           <Link>Contact</Link>
         </Nav>
-        <Image src={require('../assets/music-store.jpg')} alt='music-store'/>
+        <LandingImage>
+          <h1>Matthew Atkins</h1>
+          <h4>Front End Developer</h4>
+        </LandingImage>
+        {/* <Image src={require('../../assets/music-store.jpg')} alt='music-store'/> */}
         <Container>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </Container>
