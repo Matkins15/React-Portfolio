@@ -5,14 +5,6 @@ export const Image = styled.img`
   height: 80vh;
  `
 
-export const Nav = styled.div`
-   width: 100%;
-   height: 10vh;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
- `
 export const LandingImage = styled.div`
   height: 100vh;
   background-image: url('${require('../../assets/music-store.jpg')}');
