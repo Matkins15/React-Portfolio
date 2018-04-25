@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
-import Nav from '../../containers/Nav/nav'
+import Nav from '../../containers/Nav/Nav'
 import { LandingImage, RevealP } from './Home.style'
 // import WhenInView from 'components/WhenInView/WhenInView'
 
