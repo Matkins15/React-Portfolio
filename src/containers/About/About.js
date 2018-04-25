@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
-import Nav from '../../containers/Nav/nav'
+import Nav from '../../containers/Nav/Nav'
 
 export default class About extends Component {
   static PropTypes = {}
