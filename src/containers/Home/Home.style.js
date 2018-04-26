@@ -6,7 +6,7 @@ export const Image = styled.img`
  `
 
 export const LandingImage = styled.div`
-  height: 100vh;
+  height: 50vh;
   background-image: url('${require('../../assets/music-store.jpg')}');
   background-repeat: no-repeat;
   background-position: center;
