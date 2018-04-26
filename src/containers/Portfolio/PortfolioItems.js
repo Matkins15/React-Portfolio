@@ -2,18 +2,21 @@ import React, { Component } from 'react'
 
 class PortfolioItems extends Component {
   render () {
-    console.log(this.props.portfolio)
     let items
     if (this.props.portfolio) {
-      items = this.props.portfolio.map(key => key.name)
-      console.log(items)
+      items = this.props.portfolio.map(portfolioObj => {
+        let newPortObj = {}
+        newPortObj.name = portfolioObj.name
+        newPortObj.description = portfolioObj.description
+        newPortObj.image = portfolioObj.image
+        console.log(newPortObj)
+        return newPortObj
+      })
     }
     return (
       <div>
         <h1>PortfolioItems</h1>
-        <li>
-          {items}
-        </li>
+
       </div>
     )
   }
