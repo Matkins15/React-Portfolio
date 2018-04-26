@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Nav from '../../containers/Nav/Nav'
+import PortfolioItems from '../../containers/Portfolio/PortfolioItems'
 
 export default class Portfolio extends Component {
   constructor () {
@@ -20,16 +21,11 @@ export default class Portfolio extends Component {
     }
   }
   render () {
-    let portfolioItems
-    if (this.state.portfolio) {
-      portfolioItems = this.state.portfolio.map(portfolio => {
-        console.log(portfolio)
-      })
-    }
     return (
       <div>
         <Nav />
         <h1>Portfolio Stuff</h1>
+        <PortfolioItems portfolio={this.state.portfolio} />
       </div>
     )
   }
