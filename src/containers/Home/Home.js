@@ -7,7 +7,6 @@ import { LandingImage, RevealP } from './Home.style'
 class Home extends Component {
 
   render () {
-    let portfolioItems
     return (
       <div>
         <Nav />

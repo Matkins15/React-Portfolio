@@ -3,20 +3,21 @@ import React, { Component } from 'react'
 class PortfolioItems extends Component {
   render () {
     let items
-    if (this.props.portfolio) {
-      items = this.props.portfolio.map(portfolioObj => {
-        let newPortObj = {}
-        newPortObj.name = portfolioObj.name
-        newPortObj.description = portfolioObj.description
-        newPortObj.image = portfolioObj.image
-        console.log(newPortObj)
-        return newPortObj
-      })
+    if (this.props.port.portfolio) {
+      console.log(this.props.port.portfolio)
     }
     return (
       <div>
         <h1>PortfolioItems</h1>
-
+        <div>
+          {this.props.port.portfolio.map((item) =>
+            <div>
+              <h1>{item.name}</h1>
+              <p>{item.description}</p>
+              <img src='{item.imageUrl}' />
+            </div>
+           )}
+        </div>
       </div>
     )
   }
