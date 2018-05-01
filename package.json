@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.6.1",
+    "chart.js": "^2.7.2",
     "react": "^16.3.2",
+    "react-chartjs-2": "^2.7.2",
     "react-dom": "^16.3.2",
     "react-router": "^3.2.1",
     "react-scripts": "1.1.4",
