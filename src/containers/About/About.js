@@ -5,8 +5,8 @@ import { Bar } from 'react-chartjs-2';
 
 
 export default class About extends Component {
-  static PropTypes = {}
   constructor(props){
+    console.log(props);
     super(props)
     this.state = {
       chartData: {
@@ -21,6 +21,12 @@ export default class About extends Component {
       }
     }
   }
+
+  static defaultProps = {
+    displayTitle: true,
+    displayLegend: true,
+    legendPosition: 'right'
+  }
   
   render () {
     return (
@@ -34,13 +40,13 @@ export default class About extends Component {
             data={this.state.chartData}
           	options={{
               title: {
-                display:true,
+                display:this.props.displayTitle,
                 text: 'My Skills',
                 fontSize: 18
               },
               legend: {
-                display: true,
-                position: 'right'
+                display: this.props.displayLegend,
+                position: this.props.legendPosition
               }
           	}}
           />
