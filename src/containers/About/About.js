@@ -33,6 +33,15 @@ export default class About extends Component {
           <Bar
             data={this.state.chartData}
           	options={{
+              title: {
+                display:true,
+                text: 'My Skills',
+                fontSize: 18
+              },
+              legend: {
+                display: true,
+                position: 'right'
+              }
           	}}
           />
         </Container>
