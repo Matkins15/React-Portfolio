@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
 import Nav from '../../containers/Nav/Nav'
 import { Bar } from 'react-chartjs-2';
+import { PortfolioImage } from './About.style'
+
 
 
 export default class About extends Component {
@@ -25,17 +27,36 @@ export default class About extends Component {
   static defaultProps = {
     displayTitle: true,
     displayLegend: true,
-    legendPosition: 'right'
+    legendPosition: 'right',
   }
-  
+
   render () {
+    const header = {
+      display: 'flex',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      padding: '2em 0em'
+    }
+    const portfolioImage = {
+      height: '40vh',
+      width: 'auto',
+      marginRight: '2em'
+    }
+
+    const about = {
+      flex: '1',
+      lineHeight: '1.5em'
+      
+    }
+    
     return (
       <div>
         <Nav />
         <Container>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <div style={header}>
+            <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
+            <p style={about}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
           <Bar
             data={this.state.chartData}
           	options={{

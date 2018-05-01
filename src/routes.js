@@ -6,11 +6,16 @@ import Portfolio from './containers/Portfolio/Portfolio'
 import Contact from './containers/Contact/Contact'
 import App from './containers/App/App'
 
+const MyAboutComp = (props) => {
+  return (
+    <About legendPosition='bottom' />
+  )
+}
 export default (
   <Router history={hashHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Home} />
-      <Route path='about' component={About} />
+      <Route path='about' component={MyAboutComp} />
       <Route path='portfolio' component={Portfolio} />
       <Route path='contact' component={Contact} />
     </Route>
