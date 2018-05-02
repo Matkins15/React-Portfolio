@@ -13,12 +13,11 @@ export default class Canvas extends Component {
           bottom: 0,
           zIndex: -1,
           backgroundColor: 'black'
-
         }}
         params={{
           'particles': {
             'number': {
-              'value': 100,
+              'value': 25,
               'density': {
                 'enable': true,
                 'value_area': 1000
@@ -63,9 +62,9 @@ export default class Canvas extends Component {
               }
             },
             'line_linked': {
-              'enable': false,
-              'distance': 300,
-              'color': '#ffffff',
+              'enable': true,
+              'distance': 100,
+              'color': '#eee',
               'opacity': 0.4,
               'width': 2
             },
@@ -89,7 +88,7 @@ export default class Canvas extends Component {
             'events': {
               'onhover': {
                 'enable': true,
-                'mode': 'bubble'
+                'mode': 'grab'
               },
               'onclick': {
                 'enable': false,
