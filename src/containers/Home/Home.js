@@ -8,11 +8,13 @@ class Home extends Component {
 
   render () {
     const name = {
-      fontSize: '5em'
+      fontSize: '100px',
+      letterSpacing: '.15em'
     }
 
     const title = {
-      fontSize: '2em'
+      fontSize: '50px',
+      letterSpacing: '.1em'
     }
     return (
       <div>

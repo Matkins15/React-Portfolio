@@ -7,6 +7,7 @@ export const Image = styled.img`
 
 export const CenterText = styled.div`
   position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
