@@ -18,20 +18,20 @@ export default class Canvas extends Component {
         params={{
           'particles': {
             'number': {
-              'value': 30,
+              'value': 40,
               'density': {
                 'enable': true,
                 'value_area': 1000
               }
             },
             'color': {
-              'value': '#ffffff'
+              'value': '#eee'
             },
             'shape': {
               'type': 'circle',
               'stroke': {
                 'width': 0,
-                'color': '#000000'
+                'color': '#eee'
               },
               'polygon': {
                 'nb_sides': 5
@@ -57,13 +57,13 @@ export default class Canvas extends Component {
               'random': true,
               'anim': {
                 'enable': false,
-                'speed': 80,
+                'speed': 50,
                 'size_min': 0.1,
                 'sync': false
               }
             },
             'line_linked': {
-              'enable': true,
+              'enable': false,
               'distance': 300,
               'color': '#ffffff',
               'opacity': 0.4,
@@ -71,9 +71,9 @@ export default class Canvas extends Component {
             },
             'move': {
               'enable': true,
-              'speed': 12,
+              'speed': 4,
               'direction': 'none',
-              'random': false,
+              'random': true,
               'straight': false,
               'out_mode': 'out',
               'bounce': false,
@@ -85,29 +85,29 @@ export default class Canvas extends Component {
             }
           },
           'interactivity': {
-            'detect_on': 'canvas',
+            'detect_on': 'window',
             'events': {
               'onhover': {
-                'enable': false,
-                'mode': 'repulse'
+                'enable': true,
+                'mode': 'bubble'
               },
               'onclick': {
-                'enable': true,
-                'mode': 'push'
+                'enable': false,
+                'mode': 'grab'
               },
               'resize': true
             },
             'modes': {
               'grab': {
-                'distance': 800,
+                'distance': 500,
                 'line_linked': {
                   'opacity': 1
                 }
               },
               'bubble': {
-                'distance': 800,
+                'distance': 100,
                 'size': 40,
-                'duration': 2,
+                'duration': 10,
                 'opacity': 0.8,
                 'speed': 3
               },
