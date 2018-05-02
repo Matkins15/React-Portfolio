@@ -18,7 +18,7 @@ export default class Canvas extends Component {
         params={{
           'particles': {
             'number': {
-              'value': 40,
+              'value': 50,
               'density': {
                 'enable': true,
                 'value_area': 1000
@@ -75,7 +75,7 @@ export default class Canvas extends Component {
               'direction': 'none',
               'random': true,
               'straight': false,
-              'out_mode': 'out',
+              'out_mode': 'bounce',
               'bounce': false,
               'attract': {
                 'enable': false,
