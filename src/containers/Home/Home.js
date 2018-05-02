@@ -1,19 +1,28 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
 import Nav from '../../containers/Nav/Nav'
-import { LandingImage, RevealP } from './Home.style'
+import { CenterText } from './Home.style'
 import Canvas from '../../containers/Canvas/Canvas.js'
 
 class Home extends Component {
 
   render () {
+    const name = {
+      fontSize: '5em'
+    }
+
+    const title = {
+      fontSize: '2em'
+    }
     return (
       <div>
         <Nav />
         <Container>
           <Canvas />
-          <h1>Matthew Atkins</h1>
-          <h4>Front End Developer</h4>
+          <CenterText>
+            <span style={name}>Matthew Atkins</span>
+            <span style={title}>Front End Developer</span>
+          </CenterText>
         </Container>
       </div>
     )

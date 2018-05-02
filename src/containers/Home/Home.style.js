@@ -5,41 +5,14 @@ export const Image = styled.img`
   height: 80vh;
  `
 
-export const LandingImage = styled.div`
-  height: 50vh;
-  background-image: url('${require('../../assets/music-store.jpg')}');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
+export const CenterText = styled.div`
+  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
-  color: red;
-  font-size: 2em;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
-export const RevealP = styled.p`
-  position: relative;
-  &:after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-
-    transform-origin: left;
-    transform: rotateY(90deg);
-
-    transition: transform 5s;
-  }
-
-  ${({ hide }) => hide && css `
-    &:after {
-      transform: rotateY(0deg);
-    }
- `}
-`
