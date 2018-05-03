@@ -4,6 +4,10 @@ import { Link } from 'react-router'
 import { slide as Menu } from 'react-burger-menu'
 
 export default class Nav extends Component {
+  constructor (props) {
+    super(props)
+    console.log(this.props)
+  }
   showSettings (event) {
     event.preventDefault()
   }
@@ -28,7 +32,7 @@ export default class Nav extends Component {
         background: '#bdc3c7'
       },
       bmMenu: {
-        background: '#373a47',
+        background: '#333',
         padding: '2.5em 1.5em 0',
         fontSize: '1.15em'
       },

@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
-import Nav from '../../containers/Nav/Nav'
 import { Bar } from 'react-chartjs-2';
 import { PortfolioImage } from './About.style'
 
@@ -51,7 +50,6 @@ export default class About extends Component {
     
     return (
       <div>
-        <Nav />
         <Container>
           <div style={header}>
             <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
