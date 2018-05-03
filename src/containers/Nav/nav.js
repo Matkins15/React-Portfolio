@@ -1,15 +1,39 @@
 import React, { Component } from 'react'
 // import { Navigation } from './Nav.style'
 import { Link } from 'react-router'
-import { slide as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 
 export default class Nav extends Component {
   constructor (props) {
     super(props)
-    console.log(this.props)
+    this.state = {
+      menuOpen: props.isOpen
+    }
+    console.log(props)
   }
-  showSettings (event) {
-    event.preventDefault()
+  // This keeps your state in sync with the opening/closing of the menu
+  // via the default means, e.g. clicking the X, pressing the ESC key etc.
+  handleStateChange (state) {
+    this.setState({
+      menuOpen: this.state.menuOpen
+    })
+  }
+
+  // This can be used to close the menu, e.g. when a user clicks a menu item
+  closeMenu () {
+    this.setState({
+      menuOpen: false
+    })
+    console.log(this.state.menuOpen)
+    console.log('i was clicked')
+  }
+
+  // This can be used to toggle the menu, e.g. when using a custom icon
+  // Tip: You probably want to hide either/both default icons if using a custom icon
+  toggleMenu () {
+    this.setState({
+      menuOpen: !this.state.menuOpen
+    })
   }
 
   render () {
@@ -36,6 +60,15 @@ export default class Nav extends Component {
         padding: '2.5em 1.5em 0',
         fontSize: '1.15em'
       },
+      bmMenuWrap: {
+        position: 'fixed',
+        right: 'inherit',
+        zIndex: '1100',
+        width: '20%',
+        height: '100%',
+        transform: 'translate3d(-300px, 0px, 0px)',
+        transition: 'transform 0.4s cubic-bezier(0.7, 0, 0.3, 1)'
+      },
       bmMorphShape: {
         fill: '#373a47'
       },
@@ -49,16 +82,12 @@ export default class Nav extends Component {
     }
     return (
       // <Navigation>
-      <div id='outer-container'>
-        <main id='page-wrap'>
-          <Menu styles={styles}>
-            <Link className='menu-item' to='/'>Home</Link>
-            <Link className='menu-item' to='/about'>About</Link>
-            <Link className='menu-item' to='/portfolio'>Portfolio</Link>
-            <Link className='menu-item' to='/contact'>Contact</Link>
-          </Menu>
-        </main>
-      </div>
+      <Menu styles={styles}>
+        <Link onClick={() => this.closeMenu()} className='menu-item' to='/'>Home</Link>
+        <Link onClick={() => this.closeMenu()} className='menu-item' to='/about'>About</Link>
+        <Link onClick={() => this.closeMenu()} className='menu-item' to='/portfolio'>Portfolio</Link>
+        <Link onClick={() => this.closeMenu()} className='menu-item' to='/contact'>Contact</Link>
+      </Menu>
       // </Navigation>
     )
   }
