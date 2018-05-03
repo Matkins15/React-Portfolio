@@ -64,7 +64,6 @@ export default class Nav extends Component {
         position: 'fixed',
         right: 'inherit',
         zIndex: '1100',
-        width: '20%',
         height: '100%',
         transform: 'translate3d(-300px, 0px, 0px)',
         transition: 'transform 0.4s cubic-bezier(0.7, 0, 0.3, 1)'

@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import Nav from '../../containers/Nav/Nav'
 
 class App extends Component {
+
+  componentWillMount () {
+    document.body.style.margin = '0'
+  }
   // constructor (props) {
   //   super(props)
   //   this.state = {
