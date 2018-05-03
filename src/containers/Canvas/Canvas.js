@@ -64,8 +64,8 @@ export default class Canvas extends Component {
             'line_linked': {
               'enable': true,
               'distance': 100,
-              'color': '#eee',
-              'opacity': 0.4,
+              'color': '#e5e500',
+              'opacity': 0.6,
               'width': 2
             },
             'move': {
@@ -100,7 +100,7 @@ export default class Canvas extends Component {
               'grab': {
                 'distance': 500,
                 'line_linked': {
-                  'opacity': 1
+                  'opacity': 0.6
                 }
               },
               'bubble': {
