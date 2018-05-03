@@ -9,12 +9,12 @@ export default class Portfolio extends Component {
         {
           name: 'Sellr Store Owner Navigation View',
           description: 'quick links landing page for users to easily navigate though dashboard ',
-          imageUrl: require('/Users/matthewatkins/react-portfolio/src/assets/quickLinksView.png')
+          imageUrl: require('../../assets/quickLinksView.png')
         },
         {
           name: 'Sellr Edit Product View',
           description: 'user administrative edit product dashboard view',
-          imageUrl: require('/Users/matthewatkins/react-portfolio/src/assets/EditStoreProduct.png')
+          imageUrl: require('../../assets/EditStoreProduct.png')
         }
       ]
     }

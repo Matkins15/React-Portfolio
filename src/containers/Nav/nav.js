@@ -4,6 +4,10 @@ import { Link } from 'react-router'
 import { stack as Menu } from 'react-burger-menu'
 
 export default class Nav extends Component {
+  showSettings (event) {
+    event.preventDefault()
+  }
+
   constructor (props) {
     super(props)
     this.state = {
@@ -56,7 +60,7 @@ export default class Nav extends Component {
         background: '#bdc3c7'
       },
       bmMenu: {
-        background: '#333',
+        background: '#e3e3e3',
         padding: '2.5em 1.5em 0',
         fontSize: '1.15em'
       },
@@ -72,7 +76,7 @@ export default class Nav extends Component {
         fill: '#373a47'
       },
       bmItemList: {
-        color: '#b8b7ad',
+        color: '#fff',
         padding: '0.8em'
       },
       bmOverlay: {
@@ -85,7 +89,6 @@ export default class Nav extends Component {
         <Link onClick={() => this.closeMenu()} className='menu-item' to='/'>Home</Link>
         <Link onClick={() => this.closeMenu()} className='menu-item' to='/about'>About</Link>
         <Link onClick={() => this.closeMenu()} className='menu-item' to='/portfolio'>Portfolio</Link>
-        <Link onClick={() => this.closeMenu()} className='menu-item' to='/contact'>Contact</Link>
       </Menu>
       // </Navigation>
     )

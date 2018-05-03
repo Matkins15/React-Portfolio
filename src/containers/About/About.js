@@ -2,10 +2,9 @@ import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
 import { Bar } from 'react-chartjs-2';
 import { PortfolioImage } from './About.style'
+import Contact from '../../containers/Contact/Contact'
 
-
-
-export default class About extends Component {
+class About extends Component {
   constructor(props){
     console.log(props);
     super(props)
@@ -70,7 +69,10 @@ export default class About extends Component {
           	}}
           />
         </Container>
+        <Contact />
       </div>
     )
   }
 }
+
+export default About
