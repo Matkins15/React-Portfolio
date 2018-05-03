@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
-import HomeNav from '../../containers/Nav/HomeNav'
+// import Nav from '../../containers/Nav/Nav'
 import { CenterText } from './Home.style'
 import Canvas from '../../containers/Canvas/Canvas.js'
 
@@ -18,7 +18,7 @@ class Home extends Component {
     }
     return (
       <div>
-        <HomeNav />
+        {/* <Nav /> */}
         <Container>
           <Canvas />
           <CenterText>
