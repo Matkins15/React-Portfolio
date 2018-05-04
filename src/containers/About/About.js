@@ -15,7 +15,7 @@ class About extends Component {
             {
             label: 'Skills',
             data: [ 8, 7, 7, 6, 7, 5, 7],
-            backgroundColor: ['#eee', '#000', '#333', '#aaa', '#ccc', '#ttt', '#222']
+            backgroundColor: '#e5e500'
           }
         ]
       }
@@ -30,10 +30,7 @@ class About extends Component {
 
   render () {
     const portfolioImage = {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      height: '40vh',
+      height: '40vh'
     }
     
     return (
@@ -58,7 +55,16 @@ class About extends Component {
               legend: {
                 display: this.props.displayLegend,
                 position: this.props.legendPosition
-              }
+              },
+              layout: {
+                padding: {
+                  left:50,
+                  right:50,
+                  bottom:5,
+                  top:5
+                }
+              },
+              maintainAspectRatio: true
           	}}
           />
         </Container>

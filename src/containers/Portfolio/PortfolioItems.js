@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Container } from '../../theme/layout'
 
 class PortfolioItems extends Component {
   render () {
@@ -7,7 +8,7 @@ class PortfolioItems extends Component {
       console.log(this.props.port.portfolio)
     }
     return (
-      <div>
+      <Container>
         <h1>PortfolioItems</h1>
         <div>
           {this.props.port.portfolio.map((item) =>
@@ -18,7 +19,7 @@ class PortfolioItems extends Component {
             </div>
            )}
         </div>
-      </div>
+      </Container>
     )
   }
 }
