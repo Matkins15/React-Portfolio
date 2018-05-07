@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
 import { HorizontalBar, Bar } from 'react-chartjs-2';
-import { Header, AboutText, PortfolioImage, TopWrapper } from './About.style'
+import { Header, AboutText, PortfolioImage, TopWrapper, IconsBlock } from './About.style'
 import Contact from '../../containers/Contact/Contact'
 
 class About extends Component {
@@ -34,7 +34,8 @@ class About extends Component {
     }
 
     const icon = {
-      height: '20vh'
+      height: '25vh',
+      padding: '1em 1em'
     }
 
     return (
@@ -50,7 +51,14 @@ class About extends Component {
               </AboutText>
             </Header>
           </TopWrapper>
-
+          <IconsBlock>
+            <img style={icon} src={require(`../../assets/AngularJS.png`)} />
+            <img style={icon} src={require(`../../assets/ReactJS.png`)} />
+            <img style={icon} src={require(`../../assets/Ionic.png`)} />
+            <img style={icon} src={require(`../../assets/CSS3.png`)} />
+            <img style={icon} src={require(`../../assets/ES6.svg`)} />
+            <img style={icon} src={require(`../../assets/HTML5.png`)} />
+          </IconsBlock>
           <HorizontalBar
             data={this.state.chartData}
           	options={{
@@ -75,13 +83,6 @@ class About extends Component {
           />
         </Container>
         <Contact />
-        <img style={icon} src={require(`../../assets/AngularJS.png`)} />
-        <img style={icon} src={require(`../../assets/CSS3.png`)} />
-        <img style={icon} src={require(`../../assets/ES6.svg`)} />
-        <img style={icon} src={require(`../../assets/HTML5.png`)} />
-        <img style={icon} src={require(`../../assets/ReactJS.png`)} />
-        <img style={icon} src={require(`../../assets/js.png`)} />
-        <img style={icon} src={require(`../../assets/Ionic.png`)} />
       </div>
     )
   }
