@@ -38,9 +38,15 @@ class About extends Component {
       padding: '1em 1em'
     }
 
+    const title = {
+      display: 'flex',
+      justifyContent: 'center'
+    }
+
     return (
       <div>
         <Container>
+          <h3 style={title}>Matthew Atkins</h3>
           <TopWrapper>
             <PortfolioImage>
               <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
@@ -51,6 +57,7 @@ class About extends Component {
               </AboutText>
             </Header>
           </TopWrapper>
+          <h3 style={title}>Skills Playlist</h3>
           <IconsBlock>
             <img style={icon} src={require(`../../assets/AngularJS.png`)} />
             <img style={icon} src={require(`../../assets/ReactJS.png`)} />
@@ -64,7 +71,7 @@ class About extends Component {
           	options={{
               title: {
                 display:this.props.displayTitle,
-                text: 'My Skills',
+                // text: 'My Skills',
                 fontSize: 18
               },
               legend: {
