@@ -1,26 +1,28 @@
 import styled from 'styled-components'
 
 export const Header = styled.div`
-  width: 100%;
-  height: 33%;
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
+  flex: 1;
+  padding: 0em 1em;
 `
 
 export const AboutText = styled.div`
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  align-items: center;
   line-height: 1.5em;
-  padding: 2em;
-  font-size: 1em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 `
 
 export const PortfolioImage = styled.div `
-  width: 100%;
   height: 50vh;
-  margin-top: 10vh;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  padding: 0em 1em;
+`
+
+export const TopWrapper = styled.div`
+  width: 100%;
+  padding-top: 2em;
+  display: flex;
+  flex-flow: row wrap;
 `

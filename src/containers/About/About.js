@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
 import { HorizontalBar, Bar } from 'react-chartjs-2';
-import { Header, AboutText, PortfolioImage } from './About.style'
+import { Header, AboutText, PortfolioImage, TopWrapper } from './About.style'
 import Contact from '../../containers/Contact/Contact'
 
 class About extends Component {
@@ -32,18 +32,21 @@ class About extends Component {
     const portfolioImage = {
       height: '40vh'
     }
-    
+
     return (
       <div>
         <Container>
-          <PortfolioImage>
-            <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
-          </PortfolioImage>
-          <Header>
-            <AboutText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </AboutText>
-          </Header>
+          <TopWrapper>
+            <PortfolioImage>
+              <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
+            </PortfolioImage>
+            <Header>
+              <AboutText>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </AboutText>
+            </Header>
+          </TopWrapper>
+
           <HorizontalBar
             data={this.state.chartData}
           	options={{
@@ -58,13 +61,12 @@ class About extends Component {
               },
               layout: {
                 padding: {
-                  left:20,
-                  right:20,
+                  left:0,
+                  right:0,
                   bottom:5,
                   top:5
                 }
-              },
-              maintainAspectRatio: true
+              }
           	}}
           />
         </Container>
