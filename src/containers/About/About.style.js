@@ -13,7 +13,7 @@ export const AboutText = styled.div`
   display: flex;
   align-items: center;
   line-height: 1.5em;
-  padding: 2em 2em;
+  padding: 2em;
   font-size: 1em;
 `
 
