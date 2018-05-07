@@ -33,6 +33,10 @@ class About extends Component {
       height: '40vh'
     }
 
+    const icon = {
+      height: '20vh'
+    }
+
     return (
       <div>
         <Container>
@@ -71,6 +75,13 @@ class About extends Component {
           />
         </Container>
         <Contact />
+        <img style={icon} src={require(`../../assets/AngularJS.png`)} />
+        <img style={icon} src={require(`../../assets/CSS3.png`)} />
+        <img style={icon} src={require(`../../assets/ES6.svg`)} />
+        <img style={icon} src={require(`../../assets/HTML5.png`)} />
+        <img style={icon} src={require(`../../assets/ReactJS.png`)} />
+        <img style={icon} src={require(`../../assets/js.png`)} />
+        <img style={icon} src={require(`../../assets/Ionic.png`)} />
       </div>
     )
   }

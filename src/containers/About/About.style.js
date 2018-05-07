@@ -22,6 +22,7 @@ export const PortfolioImage = styled.div `
 
 export const TopWrapper = styled.div`
   width: 100%;
+  height: 40%;
   padding-top: 2em;
   display: flex;
   flex-flow: row wrap;
