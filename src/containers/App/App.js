@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import Nav from '../../containers/Nav/Nav'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
+injectTapEventPlugin()
 
 class App extends Component {
-
   componentWillMount () {
     document.body.style.margin = '0'
   }
+
   // constructor (props) {
   //   super(props)
   //   this.state = {
@@ -37,10 +41,12 @@ class App extends Component {
 
   render () {
     return (
-      <div>
-        <Nav width={'20%'} />
-        {this.props.children}
-      </div>
+      <MuiThemeProvider>
+        <div>
+          <Nav width={'20%'} />
+          {this.props.children}
+        </div>
+      </MuiThemeProvider>
     )
   }
 }

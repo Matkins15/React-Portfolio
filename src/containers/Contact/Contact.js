@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
 import { Wrapper } from './Contact.style'
+import TextField from 'material-ui/TextField';
+
 
 export default class Contact extends Component {
   constructor () {
@@ -26,7 +28,7 @@ export default class Contact extends Component {
       firstName: '',
       lastName: '',
       email: '',
-      subject: ''
+      subject: '' 
     })
   }
   
@@ -39,22 +41,35 @@ export default class Contact extends Component {
             <div>
               <label>Contact Me</label>
             </div>
-            <div>
-              <label>First Name</label>
-              <input name='firstName' onChange={e => this.change(e)} value={this.state.firstName} type='text' ref='First Name' placeholder='first name' />
-            </div>
-            <div>
-              <label>Last Name</label>
-              <input name='lastName' onChange={e => this.change(e)} value={this.state.lastName} type='text' ref='Last Name' placeholder='last name' />
-            </div>
-            <div>
-              <label>Email</label>
-              <input name='email' onChange={e => this.change(e)} type='email' ref='Email' placeholder='email' />
-            </div>
-            <div>
-              <label>Subject</label>
-              <input name='subject' onChange={e => this.change(e)} type='text' ref='Subject' placeholder='thanks for visiting. tell me about yourself!'/>
-            </div>
+              <TextField
+                name='firstName' 
+                hintText="First Name"
+                floatingLabelText="First Name"
+                onChange={e => this.change(e)} 
+                value={this.state.firstName}
+              /><br />
+              <TextField
+                name='lastName' 
+                hintText="Last Name"
+                floatingLabelText="Last Name"
+                onChange={e => this.change(e)} 
+                value={this.state.lastName}
+              /><br />
+
+              <TextField
+                name='email' 
+                hintText="Email"
+                floatingLabelText="Email"
+                onChange={e => this.change(e)} 
+                value={this.state.email}
+              /><br />
+              <TextField
+                name='subject' 
+                hintText="Interested? I'm available for hire!"
+                floatingLabelText="Subject"
+                onChange={e => this.change(e)} 
+                value={this.state.subject}
+              /><br />
             <button onClick={(e) => this.onSubmit(e)}>Submit</button>
           </form>
         </Wrapper>
