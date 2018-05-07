@@ -6,3 +6,10 @@ export const Wrapper = styled.div`
   align-items: center;
   margin-bottom: 2em;
 `
+
+export const SocialIcons = styled.div`
+  width: 100%
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+`

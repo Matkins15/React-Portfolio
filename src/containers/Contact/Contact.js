@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
-import { Wrapper } from './Contact.style'
+import { Wrapper, SocialIcons } from './Contact.style'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
+import { FaBeer, FaGithub, FaInstagram, FaLinkedin, FaEnvelope} from 'react-icons/lib/fa';
 
 
 
@@ -39,11 +40,22 @@ export default class Contact extends Component {
       display: 'table',
       margin: '0 auto'
     }
+
+    const social = {
+      fontSize: '4em',
+      padding: '.5em'
+    }
     return (
       <Container>
         <Wrapper>
           <h1>Contact Me</h1>
-          <form>
+          <SocialIcons>
+            <FaGithub style={social}/>
+            <FaInstagram style={social}/>
+            <FaEnvelope style={social}/>
+            <FaLinkedin style={social}/>
+          </SocialIcons>
+          {/* <form>
             <TextField
               name='firstName' 
               hintText="First Name"
@@ -73,7 +85,7 @@ export default class Contact extends Component {
               value={this.state.message}
             /><br />
             <RaisedButton label="Submit" style={buttonStyle} onClick={(e) => this.onSubmit(e)}/>
-          </form>
+          </form> */}
         </Wrapper>
       </Container>
     )

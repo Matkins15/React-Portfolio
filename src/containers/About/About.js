@@ -15,7 +15,7 @@ class About extends Component {
             {
             label: 'Skills',
             data: [ 8, 7, 7, 6, 7, 5, 7],
-            backgroundColor: '#e5e500'
+            backgroundColor: '#000'
           }
         ]
       }
@@ -59,7 +59,7 @@ class About extends Component {
             <img style={icon} src={require(`../../assets/ES6.svg`)} />
             <img style={icon} src={require(`../../assets/HTML5.png`)} />
           </IconsBlock>
-          <HorizontalBar
+          <Bar
             data={this.state.chartData}
           	options={{
               title: {
@@ -73,8 +73,8 @@ class About extends Component {
               },
               layout: {
                 padding: {
-                  left:0,
-                  right:0,
+                  left:50,
+                  right:50,
                   bottom:5,
                   top:5
                 }
