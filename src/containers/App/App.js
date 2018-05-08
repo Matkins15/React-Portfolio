@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div>
-          <Nav width={'20%'} />
+          <Nav />
           {this.props.children}
         </div>
       </MuiThemeProvider>
