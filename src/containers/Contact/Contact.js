@@ -11,7 +11,8 @@ class Contact extends Component {
     this.state = {
       instagramShare: 'https://www.instagram.com/matkins15/',
       githubShare: 'https://github.com/Matkins15',
-      linkedinShare: 'https://www.linkedin.com/in/matthewatkins/'
+      linkedinShare: 'https://www.linkedin.com/in/matthewatkins/',
+      emailShare: 'mailto:matthew1atkins@gmail.com'
     }
     console.log(this.state)
   }
@@ -37,7 +38,7 @@ class Contact extends Component {
           <SocialIcons>
             <FaGithub style={social} onClick={() => this.openConnection(this.state.githubShare)} target="_blank"  />
             <FaInstagram style={social} onClick={() => this.openConnection(this.state.instagramShare)} target="_blank" />
-            <FaEnvelope style={social}/>
+            <FaEnvelope style={social} onClick={() => this.openConnection(this.state.emailShare)} />
             <FaLinkedin style={social} onClick={() => this.openConnection(this.state.linkedinShare)} target="_blank" />
           </SocialIcons>
         </Wrapper>
