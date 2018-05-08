@@ -29,12 +29,13 @@ class Contact extends Component {
 
     const social = {
       fontSize: '4em',
-      padding: '.5em'
+      padding: '.5em',
+      cursor: 'pointer'
     }
     return (
       <Container>
         <Wrapper>
-          <h3>Hit me up!</h3>
+          <h3>Let's Connect!</h3>
           <SocialIcons>
             <FaGithub style={social} onClick={() => this.openConnection(this.state.githubShare)} target="_blank"  />
             <FaInstagram style={social} onClick={() => this.openConnection(this.state.instagramShare)} target="_blank" />
