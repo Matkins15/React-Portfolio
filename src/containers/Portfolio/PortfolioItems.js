@@ -8,7 +8,7 @@ class PortfolioItems extends Component {
       console.log(this.props.port.portfolio)
     }
     return (
-      <Container>
+      <div>
         <h1>PortfolioItems</h1>
         <div>
           {this.props.port.portfolio.map((item) =>
@@ -19,7 +19,7 @@ class PortfolioItems extends Component {
             </div>
            )}
         </div>
-      </Container>
+      </div>
     )
   }
 }

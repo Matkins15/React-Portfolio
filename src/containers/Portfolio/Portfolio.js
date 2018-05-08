@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Nav from '../../containers/Nav/Nav'
 import PortfolioItems from '../../containers/Portfolio/PortfolioItems'
+import { Container } from '../../theme/layout'
 
 export default class Portfolio extends Component {
   render () {
@@ -19,11 +20,9 @@ export default class Portfolio extends Component {
       ]
     }
     return (
-      <div>
-        <Nav />
-        <h1>Portfolio Stuff</h1>
+      <Container>
         <PortfolioItems key={port.portfolio.name} port={port} />
-      </div>
+      </Container>
     )
   }
 }
