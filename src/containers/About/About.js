@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
-import { HorizontalBar, Bar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import { Header, AboutText, PortfolioImage, TopWrapper, IconsBlock } from './About.style'
 import Contact from '../../containers/Contact/Contact'
+import MediaQuery from 'react-responsive'
+
 
 class About extends Component {
   constructor(props){
@@ -23,9 +25,9 @@ class About extends Component {
   }
 
   static defaultProps = {
-    displayTitle: true,
-    displayLegend: true,
-    legendPosition: 'right',
+    displaytitle: 'true',
+    displaylegend: 'true',
+    legendposition: 'bottom'
   }
 
   render () {
@@ -43,13 +45,21 @@ class About extends Component {
       justifyContent: 'center'
     }
 
+    const breakpoints = {
+      desktop: `(min-width: 1025px)`,
+      tablet: `(min-width: 768px) and (max-width: 1024px)`,
+      phone: `(max-width: 767px)`
+    };
+
     return (
       <div>
         <Container>
           <h3 style={title}>Matthew Atkins</h3>
           <TopWrapper>
             <PortfolioImage>
-              <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
+              <MediaQuery {...this.props } query="(min-device-width: 700px)" >
+                <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
+              </MediaQuery>
             </PortfolioImage>
             <Header>
               <AboutText>
@@ -70,13 +80,13 @@ class About extends Component {
             data={this.state.chartData}
           	options={{
               title: {
-                display:this.props.displayTitle,
+                display:this.props.displaytitle,
                 // text: 'My Skills',
                 fontSize: 18
               },
               legend: {
-                display: this.props.displayLegend,
-                position: this.props.legendPosition
+                display: this.props.displaylegend,
+                position: this.props.legendposition
               },
               layout: {
                 padding: {

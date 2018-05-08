@@ -8,7 +8,7 @@ import App from './containers/App/App'
 
 const MyAboutComp = (props) => {
   return (
-    <About legendPosition='bottom' />
+    <About />
   )
 }
 export default (
