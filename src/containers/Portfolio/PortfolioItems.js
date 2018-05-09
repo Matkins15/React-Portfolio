@@ -3,9 +3,13 @@ import { Container } from '../../theme/layout'
 
 class PortfolioItems extends Component {
   render () {
-    let items
+    // let items
     if (this.props.port.portfolio) {
       console.log(this.props.port.portfolio)
+    }
+
+    const image = {
+      height: '40vh'
     }
 
     return (
@@ -16,7 +20,7 @@ class PortfolioItems extends Component {
             <div>
               <h1>{item.name}</h1>
               <p>{item.description}</p>
-              <img src={item.imageUrl} />
+              <img style={image} src={item.imageUrl} />
             </div>
            )}
         </div>
