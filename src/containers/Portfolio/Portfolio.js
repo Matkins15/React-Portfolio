@@ -3,20 +3,25 @@ import Nav from '../../containers/Nav/Nav'
 import PortfolioItems from '../../containers/Portfolio/PortfolioItems'
 import { Container } from '../../theme/layout'
 
-export default class Portfolio extends Component {
+class Portfolio extends Component {
+  constructor () {
+    super()
+  }
+
   render () {
+    const images = require.context('../../assets', true)
+    const dog = images('./quickLinksView.png')
+    console.log(dog)
     let port = {
       portfolio: [
         {
-          name: 'Sellr Store Owner Navigation View',
-          description: 'quick links landing page for users to easily navigate though dashboard ',
-          imageUrl: require('../../assets/quickLinksView.png')
+          name: 'Sellr Dashboard',
+          description: 'Tool to used to allow users to manage store products, ads and store details that are presented on store tablets and websites.',
+          imageUrl: dog
         },
         {
-          name: 'Sellr Edit Product View',
-          description: 'user administrative edit product dashboard view',
-          imageUrl: require('../../assets/EditStoreProduct.png')
-        }
+          name: 'Sellr Mobile',
+          description: 'App used to add, delete and update store products.' }
       ]
     }
     return (
@@ -26,3 +31,5 @@ export default class Portfolio extends Component {
     )
   }
 }
+
+export default Portfolio

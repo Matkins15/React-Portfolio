@@ -64,7 +64,8 @@ export default class Nav extends Component {
     const link = {
       color: '#fff',
       textDecoration: 'none',
-      padding: '.25em 0em'
+      padding: '.25em 0em',
+      textTransform: 'uppercase'
     }
 
     return (

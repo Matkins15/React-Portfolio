@@ -7,6 +7,7 @@ class PortfolioItems extends Component {
     if (this.props.port.portfolio) {
       console.log(this.props.port.portfolio)
     }
+
     return (
       <div>
         <h1>PortfolioItems</h1>
@@ -15,7 +16,7 @@ class PortfolioItems extends Component {
             <div>
               <h1>{item.name}</h1>
               <p>{item.description}</p>
-              <img src='{item.imageUrl}' />
+              <img src={item.imageUrl} />
             </div>
            )}
         </div>
