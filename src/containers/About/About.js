@@ -4,6 +4,7 @@ import { Bar } from 'react-chartjs-2';
 import { Header, AboutText, PortfolioImage, TopWrapper, IconsBlock } from './About.style'
 import Contact from '../../containers/Contact/Contact'
 import MediaQuery from 'react-responsive'
+import FadeIn from '../../containers/FadeIn/FadeIn'
 
 
 class About extends Component {
