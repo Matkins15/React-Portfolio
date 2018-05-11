@@ -21,7 +21,8 @@ class About extends Component {
             backgroundColor: '#000'
           }
         ]
-      }
+      },
+      hidden: 'true'
     }
   }
 
@@ -41,9 +42,22 @@ class About extends Component {
       padding: '1em 1em'
     }
 
+    const name = {
+      display: 'flex',
+      justifyContent: 'center',
+      paddingTop: '2em',
+      fontSize: '2em',
+      letterSpacing: '.5em',
+      fontWeight: '700'
+    }
+
     const title = {
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      paddingTop: '2em',
+      fontSize: '1em',
+      letterSpacing: '.4em',
+      fontWeight: '500'
     }
 
     const breakpoints = {
@@ -55,7 +69,7 @@ class About extends Component {
     return (
       <div>
         <Container>
-          <h3 style={title}>Matthew Atkins</h3>
+          <span style={name}>Matthew Atkins</span>
           <TopWrapper>
             <PortfolioImage>
               <MediaQuery {...this.props } query="(min-device-width: 700px)" >
@@ -68,7 +82,7 @@ class About extends Component {
               </AboutText>
             </Header>
           </TopWrapper>
-          <h3 style={title}>Skills Playlist</h3>
+          <span style={title}>Skills Playlist</span>
           <IconsBlock>
             <img style={icon} src={require(`../../assets/AngularJS.png`)} />
             <img style={icon} src={require(`../../assets/ReactJS.png`)} />
@@ -100,6 +114,7 @@ class About extends Component {
           	}}
           />
         </Container>
+        <span style={title}>Let's Connect</span>
         <Contact />
       </div>
     )

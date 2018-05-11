@@ -35,7 +35,6 @@ class Contact extends Component {
     return (
       <Container>
         <Wrapper>
-          <h3>Let's Connect!</h3>
           <SocialIcons>
             <FaGithub style={social} onClick={() => this.openConnection(this.state.githubShare)} target="_blank"  />
             <FaInstagram style={social} onClick={() => this.openConnection(this.state.instagramShare)} target="_blank" />

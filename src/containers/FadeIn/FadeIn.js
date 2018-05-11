@@ -9,10 +9,10 @@ class FadeIn extends Component {
     return (
       <div>
         <ReactCSSTransitionGroup
-          transitionName='toggle'
+          transitionName='slide'
           transitionEnterTimeout={300}
           transitionLeaveTimeout={300}>
-          {this.props.hidden} ? null : <div className='toggle-base'>{this.props.children}></div>
+          {this.props.hidden} ? null : <div className='slide-base'>{this.props.children}></div>
         </ReactCSSTransitionGroup>
       </div>
     )
