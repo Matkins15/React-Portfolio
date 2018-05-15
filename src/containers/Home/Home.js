@@ -9,12 +9,7 @@ class Home extends Component {
   render () {
     const name = {
       fontSize: '100px',
-      letterSpacing: '.15em',
-
-      ':hover': {
-        color: 'yellow'
-      }
-
+      letterSpacing: '.15em'
     }
 
     const title = {

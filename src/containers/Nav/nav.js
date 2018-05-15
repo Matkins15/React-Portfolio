@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { stack as Menu } from 'react-burger-menu'
 import Radium from 'radium'
-// import Radium, { Style } from 'radium'
 
 class Nav extends Component {
   showSettings (event) {
@@ -59,26 +58,28 @@ class Nav extends Component {
       /* Styling of overlay */
       bmOverlay: {
         background: 'rgba(0, 0, 0, 0.3)'
-      },
-      link: {
-        color: '#fff',
-        textDecoration: 'none',
-        padding: '.25em 0em',
-        textTransform: 'uppercase',
+      }
+    }
 
-        ':hover': {
-          color: 'red'
-        }
+    const link = {
+      color: '#fff',
+      textDecoration: 'none',
+      padding: '.25em 0em',
+      textTransform: 'uppercase',
+
+      ':hover': {
+        color: 'red'
       }
     }
 
     return (
       <Menu styles={styles} isOpen={false} >
-        <Link style={styles.link} to='/'>Home</Link>
-        <Link style={styles.link} to='/about'>About</Link>
-        <Link style={styles.link} to='/portfolio'>Portfolio</Link>
+        <Link style={link} to='/'>Home</Link>
+        <Link style={link} to='/about'>About</Link>
+        <Link style={link} to='/portfolio'>Portfolio</Link>
       </Menu>
     )
   }
 }
-export default Radium(Nav, Menu)
+
+export default Radium(Nav)
