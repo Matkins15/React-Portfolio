@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-// import { Navigation } from './Nav.style'
 import { Link } from 'react-router'
 import { stack as Menu } from 'react-burger-menu'
+import Radium from 'radium'
+// import Radium, { Style } from 'radium'
 
-export default class Nav extends Component {
+class Nav extends Component {
   showSettings (event) {
     event.preventDefault()
   }
@@ -29,7 +30,7 @@ export default class Nav extends Component {
       },
       /* Color/shape of close button cross */
       bmCross: {
-        background: '#bdc3c7'
+        background: '#ffffff'
       },
       /* General sidebar styles */
       bmMenu: {
@@ -58,24 +59,26 @@ export default class Nav extends Component {
       /* Styling of overlay */
       bmOverlay: {
         background: 'rgba(0, 0, 0, 0.3)'
+      },
+      link: {
+        color: '#fff',
+        textDecoration: 'none',
+        padding: '.25em 0em',
+        textTransform: 'uppercase',
+
+        ':hover': {
+          color: 'red'
+        }
       }
     }
 
-    const link = {
-      color: '#fff',
-      textDecoration: 'none',
-      padding: '.25em 0em',
-      textTransform: 'uppercase'
-    }
-
     return (
-      // <Navigation>
       <Menu styles={styles} isOpen={false} >
-        <Link style={link} to='/'>Home</Link>
-        <Link style={link} to='/about'>About</Link>
-        <Link style={link} to='/portfolio'>Portfolio</Link>
+        <Link style={styles.link} to='/'>Home</Link>
+        <Link style={styles.link} to='/about'>About</Link>
+        <Link style={styles.link} to='/portfolio'>Portfolio</Link>
       </Menu>
-      // </Navigation>
     )
   }
 }
+export default Radium(Nav, Menu)

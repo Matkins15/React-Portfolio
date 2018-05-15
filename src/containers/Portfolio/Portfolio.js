@@ -49,7 +49,7 @@ class Portfolio extends Component {
     return (
       <Container>
         <Wrapper>
-          <img style={sellr} src={require(`../../assets/sellrLogo.jpg`)} />
+          <a><img style={sellr} src={require(`../../assets/sellrLogo.jpg`)} /></a>
           <div style={eventr}>
             <img style={logos} src={require(`../../assets/eventrLogo.png`)} />
           </div>

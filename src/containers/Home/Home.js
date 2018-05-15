@@ -2,13 +2,19 @@ import React, { Component, PropTypes } from 'react'
 import { Container } from '../../theme/layout'
 import { CenterText } from './Home.style'
 import Canvas from '../../containers/Canvas/Canvas.js'
+import Radium from 'radium'
 
 class Home extends Component {
 
   render () {
     const name = {
       fontSize: '100px',
-      letterSpacing: '.15em'
+      letterSpacing: '.15em',
+
+      ':hover': {
+        color: 'yellow'
+      }
+
     }
 
     const title = {
@@ -29,4 +35,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Radium(Home)
