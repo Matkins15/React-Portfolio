@@ -17,7 +17,7 @@ export default class Canvas extends Component {
         params={{
           'particles': {
             'number': {
-              'value': 25,
+              'value': 200,
               'density': {
                 'enable': true,
                 'value_area': 1000
@@ -62,7 +62,7 @@ export default class Canvas extends Component {
               }
             },
             'line_linked': {
-              'enable': true,
+              'enable': false,
               'distance': 100,
               'color': '#e5e500',
               'opacity': 0.6,
@@ -98,7 +98,7 @@ export default class Canvas extends Component {
             },
             'modes': {
               'grab': {
-                'distance': 500,
+                'distance': 200,
                 'line_linked': {
                   'opacity': 0.6
                 }

@@ -15,7 +15,7 @@ export const CenterText = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: fadein 4s;
+  animation: fadein 5s;
 
   @keyframes fadein {
       from {

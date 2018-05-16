@@ -52,34 +52,40 @@ class Nav extends Component {
       },
       /* Wrapper for item list */
       bmItemList: {
-        color: '#fff',
+        color: 'red',
         padding: '0.8em'
       },
       /* Styling of overlay */
       bmOverlay: {
         background: 'rgba(0, 0, 0, 0.3)'
+      },
+      link: {
+        color: '#fff',
+        textDecoration: 'none',
+        padding: '.25em 0em',
+        textTransform: 'uppercase',
+
+        ':hover': {
+          color: 'red'
+        }
       }
     }
 
-    const link = {
-      color: '#fff',
-      textDecoration: 'none',
-      padding: '.25em 0em',
-      textTransform: 'uppercase',
-
-      ':hover': {
-        color: 'red'
-      }
-    }
+    // const link = {
+    //   color: '#fff',
+    //   textDecoration: 'none',
+    //   padding: '.25em 0em',
+    //   textTransform: 'uppercase'
+    // }
 
     return (
       <Menu styles={styles} isOpen={false} >
-        <Link style={link} to='/'>Home</Link>
-        <Link style={link} to='/about'>About</Link>
-        <Link style={link} to='/portfolio'>Portfolio</Link>
+        <Link style={styles.link} to='/'>Home</Link>
+        <Link style={styles.link} to='/about'>About</Link>
+        <Link style={styles.link} to='/portfolio'>Portfolio</Link>
       </Menu>
     )
   }
 }
 
-export default Radium(Nav)
+export default Radium(Nav, Link)
