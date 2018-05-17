@@ -4,8 +4,8 @@ import { Container } from '../../theme/layout'
 class PortfolioItems extends Component {
   render () {
     // let items
-    if (this.props.port.portfolio) {
-      console.log(this.props.port.portfolio)
+    if (this.props.port.sellr) {
+      console.log(this.props.port.sellr)
     }
 
     const image = {
@@ -16,7 +16,7 @@ class PortfolioItems extends Component {
       <div>
         <h1>PortfolioItems</h1>
         <div>
-          {this.props.port.portfolio.map((item) =>
+          {this.props.port.sellr.map((item) =>
             <div>
               <h1>{item.name}</h1>
               <p>{item.description}</p>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Nav from '../../containers/Nav/Nav'
 import PortfolioItems from '../../containers/Portfolio/PortfolioItems'
-import { Container } from '../../theme/layout'
-import { Wrapper } from './Portfolio.style'
+// import { Container } from '../../theme/layout'
+import { Wrapper, PortfolioContainer } from './Portfolio.style'
 
 class Portfolio extends Component {
   constructor () {
@@ -14,18 +14,19 @@ class Portfolio extends Component {
     const quickLinks = images('./quickLinksView.png')
     const editStore = images('./editStoreProduct.png')
 
-    const eventr = {
-      width: '300px',
-      height: '300px',
+    const title = {
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
-      border: '2px solid #E0E0E0',
-      backgroundColor: '#F8F8F8'
+      paddingTop: '2em',
+      fontSize: '1em',
+      letterSpacing: '.4em',
+      fontWeight: '500'
     }
+
     const sellr = {
-      width: '300px',
-      height: '300px'
+      width: '30vw',
+      height: '45vh',
+      padding: '0em 1em'
     }
 
     const logos = {
@@ -33,7 +34,7 @@ class Portfolio extends Component {
     }
 
     let port = {
-      portfolio: [
+      sellr: [
         {
           name: 'Sellr Dashboard',
           description: 'Tool to used to allow users to manage store products, ads and store details that are presented on store tablets and websites.',
@@ -47,15 +48,15 @@ class Portfolio extends Component {
       ]
     }
     return (
-      <Container>
+      <PortfolioContainer>
+        <span style={title}>Projects</span>
         <Wrapper>
-          <a><img style={sellr} src={require(`../../assets/sellrLogo.jpg`)} /></a>
-          <div style={eventr}>
-            <img style={logos} src={require(`../../assets/eventrLogo.png`)} />
-          </div>
+          <a><img style={sellr} src={require(`../../assets/eventrMac.jpg`)} /></a>
+          <a><img style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
+          <a><img style={sellr} src={require(`../../assets/portfolioMac.jpg`)} /></a>
         </Wrapper>
-        <PortfolioItems key={port.portfolio.name} port={port} />
-      </Container>
+        <PortfolioItems key={port.sellr.name} port={port} />
+      </PortfolioContainer>
     )
   }
 }
