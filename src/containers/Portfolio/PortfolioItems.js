@@ -14,7 +14,7 @@ class PortfolioItems extends Component {
 
     return (
       <div>
-        <h1>PortfolioItems</h1>
+        <h1>Sellr</h1>
         <div>
           {this.props.port.sellr.map((item) =>
             <div>

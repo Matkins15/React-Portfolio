@@ -7,7 +7,17 @@ import { Wrapper, PortfolioContainer } from './Portfolio.style'
 class Portfolio extends Component {
   constructor () {
     super()
+    this.state = {
+      // render: '',
+      shown: false
+    }
   }
+
+  handleClick = () => {
+    const { shown } = this.state
+    this.setState({ shown: !shown})
+  }
+
 
   render () {
     const images = require.context('../../assets', true)
@@ -52,10 +62,11 @@ class Portfolio extends Component {
         <span style={title}>Projects</span>
         <Wrapper>
           <a><img style={sellr} src={require(`../../assets/eventrMac.jpg`)} /></a>
-          <a><img style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
+          <a><img onClick={this.handleClick.bind(this, 'sellr')} style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
           <a><img style={sellr} src={require(`../../assets/portfolioMac.jpg`)} /></a>
         </Wrapper>
-        <PortfolioItems key={port.sellr.name} port={port} />
+        {this.state.shown && <PortfolioItems shown={this.state.shown} key={port.sellr.name} port={port} />}
+      
       </PortfolioContainer>
     )
   }
