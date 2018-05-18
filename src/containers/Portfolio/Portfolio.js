@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Nav from '../../containers/Nav/Nav'
-import PortfolioItems from '../../containers/Portfolio/PortfolioItems'
+import PortfolioItems  from '../../containers/Portfolio/PortfolioItems'
+import EventrItems  from '../../containers/Portfolio/EventrItems.js'
+
 // import { Container } from '../../theme/layout'
 import { Wrapper, PortfolioContainer } from './Portfolio.style'
 
@@ -8,16 +10,14 @@ class Portfolio extends Component {
   constructor () {
     super()
     this.state = {
-      // render: '',
-      shown: false
-    }
+      render: '',
+      sellr: false    }
   }
 
   handleClick = () => {
-    const { shown } = this.state
-    this.setState({ shown: !shown})
+    const { sellr } = this.state
+    this.setState({ sellr: !sellr })
   }
-
 
   render () {
     const images = require.context('../../assets', true)
@@ -61,12 +61,12 @@ class Portfolio extends Component {
       <PortfolioContainer>
         <span style={title}>Projects</span>
         <Wrapper>
-          <a><img style={sellr} src={require(`../../assets/eventrMac.jpg`)} /></a>
-          <a><img onClick={this.handleClick.bind(this, 'sellr')} style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
-          <a><img style={sellr} src={require(`../../assets/portfolioMac.jpg`)} /></a>
+          <a><img id={this.state.eventr} onClick={this.handleClick.bind(this)} style={sellr} src={require(`../../assets/eventrMac.jpg`)} /></a>
+          <a><img id={this.state.sellr} onClick={this.handleClick.bind(this)} style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
+          <a><img id={this.state.portfolio} style={sellr} src={require(`../../assets/portfolioMac.jpg`)} /></a>
         </Wrapper>
-        {this.state.shown && <PortfolioItems shown={this.state.shown} key={port.sellr.name} port={port} />}
-      
+        {this.state.sellr && <PortfolioItems shown={this.state.shown} key={port.sellr.name} port={port} />}
+        <EventrItems />      
       </PortfolioContainer>
     )
   }
