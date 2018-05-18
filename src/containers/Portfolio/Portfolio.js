@@ -7,16 +7,29 @@ import EventrItems  from '../../containers/Portfolio/EventrItems.js'
 import { Wrapper, PortfolioContainer } from './Portfolio.style'
 
 class Portfolio extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
-      render: '',
-      sellr: false    }
+      render: false,
+      active: false
+    }
+    console.log(this.state);
   }
 
-  handleClick = () => {
-    const { sellr } = this.state
-    this.setState({ sellr: !sellr })
+  toggelComponents = (props) => {
+    this.setState({ active: !this.state.active })
+    this.shiftComponents(props)
+    console.log(this.state.active)
+    console.log(this.state.render);
+    console.log('hello');
+  }
+
+  shiftComponents = (props) => {
+    if (this.state.active) {
+      console.log(this.state.render);    
+      } else {
+      console.log(!this.state.render);
+    }
   }
 
   render () {
@@ -61,12 +74,12 @@ class Portfolio extends Component {
       <PortfolioContainer>
         <span style={title}>Projects</span>
         <Wrapper>
-          <a><img id={this.state.eventr} onClick={this.handleClick.bind(this)} style={sellr} src={require(`../../assets/eventrMac.jpg`)} /></a>
-          <a><img id={this.state.sellr} onClick={this.handleClick.bind(this)} style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
-          <a><img id={this.state.portfolio} style={sellr} src={require(`../../assets/portfolioMac.jpg`)} /></a>
+          <a><img onClick={this.toggelComponents} style={sellr} src={require(`../../assets/eventrMac.jpg`)} /></a>
+          <a><img onClick={this.toggelComponents} style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
+          <a><img style={sellr} src={require(`../../assets/portfolioMac.jpg`)} /></a>
         </Wrapper>
-        {this.state.sellr && <PortfolioItems shown={this.state.shown} key={port.sellr.name} port={port} />}
-        <EventrItems />      
+      { this.state.render && <PortfolioItems active={this.state.active} key={port.sellr.name} port={port} /> }
+      { this.state.render && <EventrItems /> }
       </PortfolioContainer>
     )
   }
