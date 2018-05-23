@@ -7,11 +7,12 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 2em;
+  margin-bottom: 2em;
 `
 
 export const Content = styled.div`
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   align-items: center;
   padding: 0em 5em;
 `

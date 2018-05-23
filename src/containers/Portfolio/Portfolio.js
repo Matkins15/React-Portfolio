@@ -3,6 +3,8 @@ import Nav from '../../containers/Nav/Nav'
 import PortfolioItems  from '../../containers/Portfolio/PortfolioItems'
 import EventrItems  from '../../containers/Portfolio/EventrItems.js'
 import { Wrapper, PortfolioContainer } from './Portfolio.style'
+import { Container } from '../../theme/layout'
+
 
 class Portfolio extends Component {
   constructor (props) {
@@ -61,28 +63,28 @@ class Portfolio extends Component {
       items: [
         {
           title: 'Sellr',
-          description: 'Tool to used to allow users to manage store products, ads and store details that are presented on store tablets and websites.',
+          description: 'Sellr is a digital marketing company primarily supporting clients in the industry of beers, wines and spirits. I supported both the web and mobile application used to assit store owners with managing their store products, ads and store details.',
           technologies: ['AngularJS', 'Ionic', 'Less', 'Javascript'],
           image: sellrMac
         },
         {
           title: 'Eventr',
-          description: 'Last application built in my coding bootcamp for finding local events within a 5 mile radius using google maps API.',
+          description: 'Last project built in my coding bootcamp. The application allows users to identify all local events taking place within 5 mile radius of their current locatin.',
           technologies: ['AngularJS', 'Google Maps API', 'CSS3', 'Javascript', 'Rails'],
           image: eventrMac
         },
         {
           title: 'Portfolio',
-          description: 'Last application built in my coding bootcamp for finding local events within a 5 mile radius using google maps API.',
+          description: 'You are currently on this site. My first React app using Create React App.',
           technologies: ['ReactJS', 'Javascript', 'Create React App'],
           image: portfolioMac
         }
       ]
     }
     return (
-      <PortfolioContainer>
+      <Container>
         <PortfolioItems active={this.state.active} key={projects.title} projects={projects} />
-      </PortfolioContainer>
+      </Container>
     )
   }
 }
