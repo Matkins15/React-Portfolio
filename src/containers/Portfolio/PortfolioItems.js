@@ -1,32 +1,42 @@
 import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
+import { Wrapper, Description, Technologies } from './Portfolio.style'
+
 
 class PortfolioItems extends Component {
   constructor (props) {
     super(props)
     console.log(props)
+    console.log(props.projects.items)
   }
-  render () {
+
+  getTechnologies = (props) => {
+    this.props.projects.items.map((item) => {
+      item.technologies.forEach((tech) => {
+        console.log(tech);
+      })
+    })
+  }
+
+  render (props) {
     const image = {
       height: '40vh'
     }
-
+    {this.getTechnologies(props)}
     return (
       <div>
-        <div>
-          {this.props.projects.items.map((item) =>
-            <div>
-              <h1>{item.title}</h1>
-              <p>{item.description}</p>
+        {this.props.projects.items.map((item) =>
+          <Wrapper>
+            <h1>{item.title}</h1>
+            <img style={image} src={item.image} />
+            <Description>{item.description}</Description>
+              {item.technologies.forEach((tech) =>
               <ul>
-                {item.technologies.forEach((tech) => {
-                  <li>{tech}</li>
-                })}
+                <li>{tech}</li>
               </ul>
-              <img style={image} src={item.image} />
-            </div>
-           )}
-        </div>
+              )}
+          </Wrapper>
+         )}
       </div>
     )
   }

@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Nav from '../../containers/Nav/Nav'
 import PortfolioItems  from '../../containers/Portfolio/PortfolioItems'
 import EventrItems  from '../../containers/Portfolio/EventrItems.js'
-
-// import { Container } from '../../theme/layout'
 import { Wrapper, PortfolioContainer } from './Portfolio.style'
 
 class Portfolio extends Component {
