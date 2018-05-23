@@ -9,12 +9,23 @@ export const Wrapper = styled.div`
   padding-top: 2em;
 `
 
-export const Description = styled.p`
+export const Content = styled.div`
   display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 0em 5em;
+`
+
+export const Description = styled.div`
+  display: flex;
+  width: 50%;
 `
 
 export const Technologies = styled.div`
   flex: 1;
+  text-align: center;
+  width: 50%;
+  p { margin: 0px; }
 `
 
 export const PortfolioContainer = styled.div`
