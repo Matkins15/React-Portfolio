@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
 
 class PortfolioItems extends Component {
+  constructor (props) {
+    super(props)
+    console.log(props)
+  }
   render () {
     const image = {
       height: '40vh'
@@ -9,13 +13,17 @@ class PortfolioItems extends Component {
 
     return (
       <div>
-        <h1>Sellr</h1>
         <div>
-          {this.props.port.sellr.map((item) =>
+          {this.props.projects.items.map((item) =>
             <div>
-              <h1>{item.name}</h1>
+              <h1>{item.title}</h1>
               <p>{item.description}</p>
-              <img style={image} src={item.imageUrl} />
+              <ul>
+                {item.technologies.forEach((tech) => {
+                  <li>{tech}</li>
+                })}
+              </ul>
+              <img style={image} src={item.image} />
             </div>
            )}
         </div>

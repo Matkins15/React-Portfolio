@@ -26,7 +26,7 @@ class Portfolio extends Component {
 
   shiftComponents = (props) => {
     if (this.state.active) {
-      console.log(this.state.render);    
+      console.log(this.state.render);
       } else {
       console.log(!this.state.render);
     }
@@ -36,6 +36,9 @@ class Portfolio extends Component {
     const images = require.context('../../assets', true)
     const quickLinks = images('./quickLinksView.png')
     const editStore = images('./editStoreProduct.png')
+    const sellrMac = images('./sellrMac.jpg')
+    const eventrMac = images('./eventrMac.jpg')
+    const portfolioMac = images('./portfolioMac.jpg')
 
     const title = {
       display: 'flex',
@@ -56,30 +59,31 @@ class Portfolio extends Component {
       opacity: '.7'
     }
 
-    let port = {
-      sellr: [
+    let projects = {
+      items: [
         {
-          name: 'Sellr Dashboard',
+          title: 'Sellr',
           description: 'Tool to used to allow users to manage store products, ads and store details that are presented on store tablets and websites.',
-          imageUrl: quickLinks
+          technologies: ['AngularJS', 'Ionic', 'Less', 'Javascript'],
+          image: sellrMac
         },
         {
-          name: 'Sellr Mobile',
-          description: 'App used to add, delete and update store products.',
-          imageUrl: editStore
+          title: 'Eventr',
+          description: 'Last application built in my coding bootcamp for finding local events within a 5 mile radius using google maps API.',
+          technologies: ['AngularJS', 'Google Maps API', 'CSS3', 'Javascript', 'Rails'],
+          image: eventrMac
+        },
+        {
+          title: 'Portfolio',
+          description: 'Last application built in my coding bootcamp for finding local events within a 5 mile radius using google maps API.',
+          technologies: ['ReactJS', 'Javascript', 'Create React App'],
+          image: portfolioMac
         }
       ]
     }
     return (
       <PortfolioContainer>
-        <span style={title}>Projects</span>
-        <Wrapper>
-          <a><img onClick={this.toggelComponents} style={sellr} src={require(`../../assets/eventrMac.jpg`)} /></a>
-          <a><img onClick={this.toggelComponents} style={sellr} src={require(`../../assets/sellrMac.jpg`)} /></a>
-          <a><img style={sellr} src={require(`../../assets/portfolioMac.jpg`)} /></a>
-        </Wrapper>
-      { this.state.render && <PortfolioItems active={this.state.active} key={port.sellr.name} port={port} /> }
-      { this.state.render && <EventrItems /> }
+        <PortfolioItems active={this.state.active} key={projects.title} projects={projects} />
       </PortfolioContainer>
     )
   }
