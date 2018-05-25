@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Image = styled.img`
   width: 100vw;
@@ -11,6 +11,7 @@ export const CenterText = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
   color: #fff;
   top: 50%;
   left: 50%;

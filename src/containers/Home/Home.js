@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
 import { CenterText } from './Home.style'
 import Canvas from '../../containers/Canvas/Canvas.js'
@@ -8,13 +8,18 @@ class Home extends Component {
 
   render () {
     const name = {
+      display: 'flex',
+      justifyContent: 'center',
       fontSize: '100px',
       letterSpacing: '.15em'
     }
 
     const title = {
+      display: 'flex',
+      justifyContent: 'center',
       fontSize: '50px',
-      letterSpacing: '.1em'
+      letterSpacing: '.1em',
+      color: 'yellow'
     }
     return (
       <div>

@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
-import { Container } from '../../theme/layout'
 import { Wrapper, Description, Technologies, Content } from './Portfolio.style'
 
 class PortfolioItems extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   render (props) {
     const image = {
       height: '40vh'
@@ -46,7 +41,7 @@ class PortfolioItems extends Component {
         {this.props.projects.items.map((item) =>
           <Wrapper>
             <span style={title}>{item.title}</span>
-            <img style={image} src={item.image} />
+            <img style={image} src={item.image} alt='mac-mockups' />
             <Content>
               <Description>
                 <div style={technologies}>

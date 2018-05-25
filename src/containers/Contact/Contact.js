@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
 import { Wrapper, SocialIcons } from './Contact.style'
-import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
-import { FaBeer, FaGithub, FaInstagram, FaLinkedin, FaEnvelope} from 'react-icons/lib/fa'
+import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope} from 'react-icons/lib/fa'
 
 class Contact extends Component {
   constructor (props) {
@@ -22,11 +20,6 @@ class Contact extends Component {
   }
 
   render () {
-    const buttonStyle = {
-      display: 'table',
-      margin: '0 auto'
-    }
-
     const social = {
       fontSize: '4em',
       padding: '.5em',

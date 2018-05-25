@@ -1,11 +1,9 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
 import { Bar } from 'react-chartjs-2';
 import { Header, AboutText, PortfolioImage, TopWrapper, IconsBlock } from './About.style'
 import Contact from '../../containers/Contact/Contact'
 import MediaQuery from 'react-responsive'
-import FadeIn from '../../containers/FadeIn/FadeIn'
-
 
 class About extends Component {
   constructor(props){
@@ -84,12 +82,12 @@ class About extends Component {
           </TopWrapper>
           <span style={title}>Skills Playlist</span>
           <IconsBlock>
-            <img style={icon} src={require(`../../assets/AngularJS.png`)} />
-            <img style={icon} src={require(`../../assets/ReactJS.png`)} />
-            <img style={icon} src={require(`../../assets/Ionic.png`)} />
-            <img style={icon} src={require(`../../assets/CSS3.png`)} />
-            <img style={icon} src={require(`../../assets/ES6.svg`)} />
-            <img style={icon} src={require(`../../assets/HTML5.png`)} />
+            <img style={icon} src={require(`../../assets/AngularJS.png`)} alt='icons' />
+            <img style={icon} src={require(`../../assets/ReactJS.png`)} alt='icons' />
+            <img style={icon} src={require(`../../assets/Ionic.png`)} alt='icons' />
+            <img style={icon} src={require(`../../assets/CSS3.png`)} alt='icons' />
+            <img style={icon} src={require(`../../assets/ES6.svg`)} alt='icons' />
+            <img style={icon} src={require(`../../assets/HTML5.png`)} alt='icons' />
           </IconsBlock>
           <Bar
             data={this.state.chartData}

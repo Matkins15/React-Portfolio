@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import Nav from '../../containers/Nav/Nav'
 import PortfolioItems  from '../../containers/Portfolio/PortfolioItems'
-import EventrItems  from '../../containers/Portfolio/EventrItems.js'
-import { Wrapper, PortfolioContainer } from './Portfolio.style'
 import { Container } from '../../theme/layout'
-
 
 class Portfolio extends Component {
   constructor (props) {
@@ -34,30 +30,9 @@ class Portfolio extends Component {
 
   render () {
     const images = require.context('../../assets', true)
-    const quickLinks = images('./quickLinksView.png')
-    const editStore = images('./editStoreProduct.png')
     const sellrMac = images('./sellrMac.jpg')
     const eventrMac = images('./eventrMac.jpg')
     const portfolioMac = images('./portfolioMac.jpg')
-
-    const title = {
-      display: 'flex',
-      justifyContent: 'center',
-      paddingTop: '2em',
-      fontSize: '1em',
-      letterSpacing: '.4em',
-      fontWeight: '500'
-    }
-
-    const sellr = {
-      width: '30vw',
-      height: '45vh',
-      padding: '0em 1em'
-    }
-
-    const logos = {
-      opacity: '.7'
-    }
 
     let projects = {
       items: [
