@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container } from '../../theme/layout'
 import { Bar } from 'react-chartjs-2';
-import { Header, AboutText, PortfolioImage, TopWrapper, IconsBlock } from './About.style'
+import { Name, AboutText, TopWrapper, IconsBlock, Image } from './About.style'
 import Contact from '../../containers/Contact/Contact'
 import MediaQuery from 'react-responsive'
 
@@ -31,22 +31,9 @@ class About extends Component {
   }
 
   render () {
-    const portfolioImage = {
-      height: '40vh'
-    }
-
     const icon = {
       height: '25vh',
       padding: '1em 1em'
-    }
-
-    const name = {
-      display: 'flex',
-      justifyContent: 'center',
-      paddingTop: '2em',
-      fontSize: '2em',
-      letterSpacing: '.5em',
-      fontWeight: '700'
     }
 
     const title = {
@@ -67,18 +54,12 @@ class About extends Component {
     return (
       <div>
         <Container>
-          <span style={name}>Matthew Atkins</span>
+          <Name>Matthew Atkins</Name>
           <TopWrapper>
-            <PortfolioImage>
-              <MediaQuery {...this.props } query="(min-device-width: 700px)" >
-                <img style={portfolioImage} src={require(`../../assets/portfolio-pic.jpg`)} />
-              </MediaQuery>
-            </PortfolioImage>
-            <Header>
-              <AboutText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </AboutText>
-            </Header>
+            <Image src={require(`../../assets/portfolio-pic.jpg`)} />
+            <AboutText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </AboutText>
           </TopWrapper>
           <span style={title}>Skills Playlist</span>
           <IconsBlock>

@@ -15,24 +15,37 @@ const media = Object.keys(sizes).reduce((acc, label) => {
   return acc
 }, {})
 
-export const Header = styled.div`
-  display: flex;
-  align-items: center;
-  flex: 1;
-  padding: 0em 1em;
-`
-
 export const AboutText = styled.div`
+  flex: 1;
+  padding: 2em 4em;
   line-height: 1.5em;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  ${media.phone`
+    justify-content: center;
+    padding: 1em 0em;
+    line-height: 1.5em;
+    font-size: .8em;
+  `}
+`
+export const Name = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+  font-size: 2em;
+  letter-spacing: .5em;
+  font-weight: 700;
+  ${media.tablet`font-size: 1.5em;`}
+  ${media.phone`font-size: 1em;
+    letter-spacing: .25em;
+    `}
+
 `
 
-export const PortfolioImage = styled.div `
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  padding: 0em 1em;
+export const Image = styled.img `
+  height: 40vh;
+  ${media.tablet`height: 30vh;`}
+  ${media.phone`height: 20vh;`}
 `
 
 export const TopWrapper = styled.div`
@@ -41,8 +54,8 @@ export const TopWrapper = styled.div`
   padding-top: 2em;
   display: flex;
   flex-flow: row wrap;
+  ${media.tablet`justify-content: center;`}
   ${media.phone`justify-content: center;`}
-
 `
 
 export const IconsBlock = styled.div`
