@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 const sizes = {
   desktop: 992,
   tablet: 768,
-  phone: 480
+  phone: 500
 }
 
 const media = Object.keys(sizes).reduce((acc, label) => {
@@ -28,24 +28,10 @@ export const AboutText = styled.div`
     font-size: .8em;
   `}
 `
-export const Name = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: 2em;
-  font-size: 2em;
-  letter-spacing: .5em;
-  font-weight: 700;
-  ${media.tablet`font-size: 1.5em;`}
-  ${media.phone`font-size: 1em;
-    letter-spacing: .25em;
-    `}
-
-`
 
 export const Image = styled.img `
   height: 40vh;
-  ${media.tablet`height: 30vh;`}
-  ${media.phone`height: 20vh;`}
+  ${media.phone`height: 30vh;`}
 `
 
 export const TopWrapper = styled.div`
@@ -54,8 +40,8 @@ export const TopWrapper = styled.div`
   padding-top: 2em;
   display: flex;
   flex-flow: row wrap;
-  ${media.tablet`justify-content: center;`}
-  ${media.phone`justify-content: center;`}
+  ${media.tablet`justify-content: center; flex-direction: column;`}
+  ${media.phone`justify-content: center; flex-direction: column;`}
 `
 
 export const IconsBlock = styled.div`

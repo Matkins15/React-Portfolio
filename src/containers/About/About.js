@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Container } from '../../theme/layout'
+import { Container, Name } from '../../theme/layout'
 import { Bar } from 'react-chartjs-2';
-import { Name, AboutText, TopWrapper, IconsBlock, Image } from './About.style'
+import { AboutText, TopWrapper, IconsBlock, Image } from './About.style'
 import Contact from '../../containers/Contact/Contact'
 import MediaQuery from 'react-responsive'
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Wrapper, Description, Technologies, Content } from './Portfolio.style'
+import { Name } from '../../theme/layout'
 
 class PortfolioItems extends Component {
   render (props) {
@@ -37,7 +38,7 @@ class PortfolioItems extends Component {
     }
     return (
       <div>
-        <span style={name}>Recent Projects</span>
+        <Name>Recent Projects</Name>
         {this.props.projects.items.map((item) =>
           <Wrapper>
             <span style={title}>{item.title}</span>

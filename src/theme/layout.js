@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 const sizes = {
   desktop: 992,
   tablet: 768,
-  phone: 480
+  phone: 500
 }
 
 const media = Object.keys(sizes).reduce((acc, label) => {
@@ -16,10 +16,21 @@ const media = Object.keys(sizes).reduce((acc, label) => {
 }, {})
 
 export const Container = styled.div`
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-top: 30px;
-  ${'' /* ${media.tablet`justify-content: center;`}
-  ${media.phone`justify-content: center;`} */}
+  padding: 30px 80px 0px 80px;
+  ${media.tablet`padding: 30px 50px 0px 50px;`}
+  ${media.phone`padding: 30px 20px 0px 20px;`}
 
+`
+
+export const Name = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+  font-size: 2em;
+  letter-spacing: .5em;
+  font-weight: 700;
+  ${media.tablet`font-size: 1.5em;`}
+  ${media.phone`font-size: 1em;
+    letter-spacing: .25em;
+    `}
 `
